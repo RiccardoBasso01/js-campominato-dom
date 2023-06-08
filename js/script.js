@@ -15,9 +15,12 @@ let currentScore = 0; // Punteggio
 play.addEventListener('click', function () {
     // Faccio apparire la griglia
     grid.classList.remove('d-none');
-
+    
+    
     // Pulisco la griglia prima di generare le celle nuove
     grid.innerText = '';
+    grid.className = '';
+    currentScore = 0; // Azzero il punteggio
 
 
     if (difficulty.value === 'easy') {
@@ -86,15 +89,16 @@ play.addEventListener('click', function () {
 
         console.log('Celle bomba: ', bombs[i])
     }
-
+    
+    // FUNZIOINE FINE PARTITA
     const endGame = (result) => {
         for(let i = 0; i < cells.length; i++){
             cells[i].classList.remove('disable-bomb')
         }
         if (result === 'win'){
-            alert('Hai vinto!')
+            grid.classList.add('winner');
         } else{
-            alert('Hai perso!')
+            grid.classList.add('looser');
         }
     }
 

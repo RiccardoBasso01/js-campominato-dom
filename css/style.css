@@ -43,6 +43,7 @@ h1{
 
 .card-header{
     padding: 10px;
+    gap: 10px;
 }
 
 .card-body{
@@ -77,6 +78,7 @@ h1{
 
     width: 400px;
     height: 400px;
+    position: relative;
 }
 
 .cell{
@@ -104,6 +106,38 @@ h1{
 #grid.hard .cell{
     flex: 0 0 10%;
     height: 10%;
+}
+
+#grid.looser::after,
+#grid.winner::after{
+    font-weight: 900;
+    font-size: var(--font-size-xxxl);
+    color: red;
+    text-shadow: 0 0 2px black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+#grid.looser::after{
+    content: 'GAME OVER';
+}
+
+#grid.winner::after{
+    content: 'HAI VINTO!';
+}
+
+#grid.looser::before,
+#grid.winner::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.2);    
 }
 
 .active{
