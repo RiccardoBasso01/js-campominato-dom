@@ -3,6 +3,11 @@ body{
     background-color: #d7d6d6;
 }
 
+
+/* :root{
+    --col-purple: purple;
+} */
+
 /**************************** header *******************************/
 header{
     background-color: var(--blue);
@@ -89,6 +94,8 @@ h1{
 #grid.easy .cell{
     flex: 0 0 calc(100% / 8);
     height: calc(100% / 8);
+
+    /* background-color: var(--col-purple); */
 }
 #grid.medium .cell{
     flex: 0 0 calc(100% / 9);
@@ -100,15 +107,19 @@ h1{
 }
 
 .active{
-    background-color: lightblue;
+    background-color: var(--light-grey);
+    border: 1px solid var(--grey);
 }
 
 /**************************** bombe *******************************/
 .bomb{
-    background-color: red;
     background-image: url(https://images.emojiterra.com/google/android-12l/512px/1f4a3.png);
     background-size: contain;
 
+}
+
+.bomb.disable-bomb{
+    background-image: none;
 }
 
 .one-bomb::after{
