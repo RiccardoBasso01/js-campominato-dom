@@ -1,0 +1,97 @@
+/* !Libreria personale Riccardo-Basso */
+
+:root {
+    --font-size-s:0.6rem;
+    --font-size-m:1rem;
+    --font-size-l:1.5rem;
+    --font-size-xl:2rem;
+    --font-size-xxl:3.5rem;
+    --font-size-xxxl:5rem;
+    --card-space: 2px;
+
+    --color-card: #ec407a;
+    --grey: #969696;
+    --light-grey: #cdcdcd;
+    --dark-grey: rgb(87,87,87);
+    --blue: #4285f4;
+    --orange: #fabb05;
+    --light-orange: rgb(244, 213, 141);
+    --light-blue: #b4d0e7;
+
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+
+/**************************** classi flex *******************************/
+.flex-centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/**************************** cards *******************************/
+.card{
+    width: 100%;
+    margin: 50px auto;
+
+    text-align: center;
+    border: 1px solid var(--grey);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.card-header{
+    background-color: var(--blue);
+    color: white;
+}
+
+.card-header,
+.card-body{
+    padding: 30px;
+}
+
+.card-subtitles{
+    background-color: var(--light-grey);
+    margin: 15px 0;
+    padding: 10px 15px;
+    border-radius: 50px;
+
+    color: rgb(87, 87, 87);
+    font-weight: 600;
+    font-size: var(--font-size-m);
+    border: 1px solid var(--grey);
+
+
+    display: inline-block;
+}
+
+/**************************************************************************/
+/** Media query larghezza card */
+@media screen and (min-width: 576px){
+    .card{
+        width: 540px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .card{
+        width: 600px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .card{
+        width: 775px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .card{
+        width: 937px;
+    }
+}
+
